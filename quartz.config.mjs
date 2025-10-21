@@ -1,22 +1,25 @@
 // quartz.config.mjs
 export default {
   site: {
-    base: "/",           // root path, Vercel’de kök dizin
-    assetsDir: "_assets", // build sırasında CSS ve JS dosyalarının konumu
+    base: "/",           
+    assetsDir: "_assets", // CSS/JS assetleri
   },
   markdown: {
-    linkStyle: "pretty", // [[wikilink]] ve .md linklerini HTML’e çevirir
-    baseUrl: "/",        // site kökünden linkler oluştur
+    linkStyle: "pretty", // [[wikilink]] ve .md linklerini HTML’e çevir
+    baseUrl: "/",        
   },
   build: {
-    outDir: "docs",      // Vercel Output Directory
-    clean: true,         // build öncesi eski dosyaları temizle
+    outDir: "docs",      // Vercel output directory
+    clean: true,         // eski build dosyalarını temizle
+  },
+  content: {
+    dir: "content",      // senin Vault'un buradan alınacak
   },
   server: {
-    enableSPA: true,     // tek sayfa uygulaması için (SPA) yönlendirme
+    enableSPA: true,     // SPA yönlendirme
   },
   features: {
-    syntaxHighlight: true, // Kod blokları için highlight
+    syntaxHighlight: true, // kod blokları için
     latex: true,           // LaTeX desteği
   },
 };
